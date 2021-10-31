@@ -35,7 +35,7 @@
     },
     computed:{
       computedStyleObject(){
-        return {background: `url(https://en.pimg.jp/023/182/267/1/23182267.jpg) ${this.imgCoord} 0`}
+        return {background: `url(https://en.pimg.jp/023/182/267/1/23182267.jpg) ${this.imageCoord} 0`}
       }
     }
   }
