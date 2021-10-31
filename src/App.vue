@@ -9,7 +9,7 @@
       {{ result }}
     </div>
     <div>
-      {{ score }}
+      현재 {{ score }}점
     </div>
   </div>
 </template>
