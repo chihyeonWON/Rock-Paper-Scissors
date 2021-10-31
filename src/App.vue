@@ -1,6 +1,6 @@
 <template>
 <div>
-  <div id="computer" :style="{background: `url(https://en.pimg.jp/023/182/267/1/23182267.jpg) 0 0`}">
+  <div id="computer" :style="{background: `url(https://en.pimg.jp/023/182/267/1/23182267.jpg) ${imgCoord} 0`}">
   </div>
     <div>
       <button @onclick = "onClickButton('바위')">바위</button>
@@ -17,17 +17,23 @@
 </template>
 
 <script>
-export default {
-  name: 'App',
-  components: {
-  },
-  data(){
-    return{
-      result:'',
-      score:0,
-    }
-  },
-}
+  const rspCoords = {
+    바위:'0',
+    가위:'-142px',
+    보:'-284px'
+  }
+  export default {
+    name: 'App',
+    components: {
+    },
+    data(){
+      return{
+        imageCoord: rspCoords.바위,
+        result:'',
+        score:0,
+      }
+    },
+  }
 
 </script>
 
