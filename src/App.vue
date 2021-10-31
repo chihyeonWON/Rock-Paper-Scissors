@@ -37,7 +37,16 @@
       computedStyleObject(){
         return {background: `url(https://en.pimg.jp/023/182/267/1/23182267.jpg) ${this.imageCoord} 0`}
       }
-    }
+    },
+    created(){
+      console.log('created')
+    },
+    mounted(){
+      console.log('mounted')
+    },
+    updated(){
+      console.log('updated')
+    },
   }
 
 </script>
