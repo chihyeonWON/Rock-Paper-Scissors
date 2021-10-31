@@ -1,6 +1,6 @@
 <template>
 <div>
-  <div id="computer" :style="{background: `url(https://en.pimg.jp/023/182/267/1/23182267.jpg) ${imgCoord} 0`}">
+  <div id="computer" :style="computedStyleObject">
   </div>
     <div>
       <button @onclick = "onClickButton('바위')">바위</button>
@@ -33,6 +33,11 @@
         score:0,
       }
     },
+    computed:{
+      computedStyleObject(){
+        return {background: `url(https://en.pimg.jp/023/182/267/1/23182267.jpg) ${this.imgCoord} 0`}
+      }
+    }
   }
 
 </script>
