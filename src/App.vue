@@ -1,9 +1,11 @@
 <template>
-  <div id="computer">
+<div>
+  <div id="computer" :style="{background: `url(https://en.pimg.jp/023/182/267/1/23182267.jpg) 0 0`}">
+  </div>
     <div>
-      <button>바위</button>
-      <button>가위</button>
-      <button>보</button>
+      <button @onclick = "onClickButton('바위')">바위</button>
+      <button @onclick = "onClickButton('가위')">가위</button>
+      <button @onclick = "onClickButton('보')">보</button>
     </div>
     <div>
       {{ result }}
@@ -11,7 +13,7 @@
     <div>
       현재 {{ score }}점
     </div>
-  </div>
+</div>
 </template>
 
 <script>
@@ -24,8 +26,9 @@ export default {
       result:'',
       score:0,
     }
-  }
+  },
 }
+
 </script>
 
 <style>
@@ -35,4 +38,12 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
 }
+</style>
+
+<style scoped>
+  #computer {
+    width: 142px;
+    height: 200px;
+    background-position: 0 0;
+  }
 </style>
