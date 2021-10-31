@@ -22,6 +22,19 @@
     가위:'-142px',
     보:'-284px'
   };
+  
+  const scores = {
+    가위:1,
+    바위:0,
+    보:-1,
+  }
+
+  const computerChoice = (imgCoord) => {
+    return Object.entries(rspCoords).find(function(v){
+      return v[1] === imgCoord;
+    })[0];
+  }
+  
   let interval = null;
   export default {
     name: 'App',
